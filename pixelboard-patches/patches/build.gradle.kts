@@ -5,6 +5,7 @@ import org.gradle.api.file.ConfigurableFileCollection
 import org.gradle.api.file.RegularFileProperty
 import org.gradle.api.tasks.CacheableTask
 import org.gradle.api.tasks.Classpath
+import org.gradle.api.tasks.Copy
 import org.gradle.api.tasks.InputFile
 import org.gradle.api.tasks.Optional
 import org.gradle.api.tasks.OutputFile
@@ -194,6 +195,14 @@ tasks {
             "com.akshaykadam.pixelboard.patches.gboard.registry.GboardCapabilityWiringVerifier"
         )
         args(gboardProductCatalog.asFile.absolutePath)
+    }
+
+    named<Copy>("processResources") {
+        val checkedInExtensionsDir =
+            layout.projectDirectory.dir("src/main/resources/extensions").asFile.toPath().normalize()
+        exclude { details ->
+            details.file.toPath().normalize().startsWith(checkedInExtensionsDir)
+        }
     }
 
     val mppJar = named<Jar>("jar") {
