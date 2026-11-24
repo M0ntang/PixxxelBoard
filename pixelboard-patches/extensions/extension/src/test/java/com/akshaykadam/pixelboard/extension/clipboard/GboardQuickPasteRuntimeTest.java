@@ -95,7 +95,6 @@ public final class GboardQuickPasteRuntimeTest {
     @Test
     public void hasClipboardContentReflectsClipboardState() {
         ClipboardManager cm = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-        cm.clearPrimaryClip();
         Assert.assertFalse(GboardQuickPasteRuntime.hasClipboardContent(context));
 
         cm.setPrimaryClip(ClipData.newPlainText("item", "copied text"));
