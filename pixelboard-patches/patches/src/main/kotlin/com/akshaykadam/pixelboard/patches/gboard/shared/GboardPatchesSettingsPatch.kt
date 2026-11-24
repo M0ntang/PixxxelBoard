@@ -28,6 +28,8 @@ import com.akshaykadam.pixelboard.patches.gboard.features.rambler.gboardRamblerD
 import com.akshaykadam.pixelboard.patches.gboard.features.rambler.gboardRamblerMinimizeKeyPatch
 import com.akshaykadam.pixelboard.patches.gboard.features.keyboard.gboardKeyboardSymbolKeyLabelPatch
 import com.akshaykadam.pixelboard.patches.gboard.features.keyboard.gboardKeyboardHapticPatch
+import com.akshaykadam.pixelboard.patches.gboard.features.keyboard.gboardCommaSpacingPatch
+import com.akshaykadam.pixelboard.patches.gboard.features.clipboard.gboardQuickPastePatch
 import com.akshaykadam.pixelboard.patches.gboard.features.launchericon.gboardLauncherIconVisibilityPatch
 import com.akshaykadam.pixelboard.patches.gboard.features.language.gboardLanguageCycleDedupePatch
 
@@ -52,6 +54,8 @@ internal val gboardPatchesSettingsPatch = resourcePatch(
         gboardKeyboardHapticPatch,
         gboardLauncherIconVisibilityPatch,
         gboardLanguageCycleDedupePatch,
+        gboardCommaSpacingPatch,
+        gboardQuickPastePatch,
     )
 
     finalize {

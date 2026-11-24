@@ -1017,6 +1017,31 @@
         <translation locale="th">ปุ่มลูกโลกจะข้ามชุดภาษาหลายภาษาที่สลับลำดับ เช่น เยอรมัน + อังกฤษ เมื่อมี อังกฤษ + เยอรมัน อยู่ก่อน</translation>
         <translation locale="uk">Клавіша з глобусом пропускає обернені багатомовні поєднання, напр. німецька + англійська, якщо англійська + німецька йде раніше.</translation>
     </string>
+    <string name="gboard_patches_comma_spacing_title">
+        <translation locale="en">Smart comma spacing</translation>
+        <translation locale="ru">Автопробелы вокруг запятой</translation>
+        <translation locale="uk">Автопробіли навколо коми</translation>
+    </string>
+    <string name="gboard_patches_comma_spacing_summary">
+        <translation locale="en">Removes accidental spaces before commas and ensures a single space after them (e.g. "word ," -> "word, ").</translation>
+        <translation locale="ru">Убирает лишние пробелы перед запятой и ставит один пробел после неё (например, «слово ,» -> «слово, »).</translation>
+        <translation locale="uk">Прибирає зайві пробіли перед комою та додає один пробіл після неї (наприклад, «слово ,» -> «слово, »).</translation>
+    </string>
+    <string name="gboard_patches_quick_paste_title">
+        <translation locale="en">Quick paste button</translation>
+        <translation locale="ru">Кнопка быстрой вставки</translation>
+        <translation locale="uk">Кнопка швидкої вставки</translation>
+    </string>
+    <string name="gboard_patches_quick_paste_summary">
+        <translation locale="en">Shows a dedicated Paste button on the keyboard header to insert the latest clipboard item in one tap.</translation>
+        <translation locale="ru">Показывает кнопку «Вставить» на верхней панели клавиатуры для вставки последнего элемента из буфера обмена в одно нажатие.</translation>
+        <translation locale="uk">Показує кнопку «Вставити» на верхній панелі клавіатури для вставлення останнього елемента з буфера обміну в один дотик.</translation>
+    </string>
+    <string name="gboard_patches_quick_paste_button_desc">
+        <translation locale="en">Paste</translation>
+        <translation locale="ru">Вставить</translation>
+        <translation locale="uk">Вставити</translation>
+    </string>
     <string name="gboard_patches_clipboard_history_title">
         <translation locale="en">Clipboard history</translation>
         <translation locale="ar">سجل الحافظة</translation>

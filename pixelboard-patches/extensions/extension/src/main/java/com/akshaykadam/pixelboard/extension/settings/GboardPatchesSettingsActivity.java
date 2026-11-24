@@ -3128,6 +3128,8 @@ public final class GboardPatchesSettingsActivity extends Activity
             GboardRoundedKeysSettings.ensureDefaults(context, patchesPrefs);
             GboardGoogleSansSettings.ensureDefaults(context, patchesPrefs);
             GboardUndoSettings.ensureDefaults(context, patchesPrefs);
+            GboardCommaSpacingSettings.ensureDefaults(patchesPrefs);
+            GboardQuickPasteSettings.ensureDefaults(patchesPrefs);
         }
 
         boolean aiWritingToolsEnabled = writingPrefs == null
@@ -3142,6 +3144,10 @@ public final class GboardPatchesSettingsActivity extends Activity
                 && GboardEmojiSettings.readFrequentEmojisEnabled(patchesPrefs);
         boolean skipDuplicateLanguagePairs = patchesPrefs != null
                 && GboardLanguageCycleSettings.readSkipDuplicatePairs(patchesPrefs);
+        boolean commaSpacingEnabled = patchesPrefs == null
+                || GboardCommaSpacingSettings.readEnabled(patchesPrefs);
+        boolean quickPasteEnabled = patchesPrefs == null
+                || GboardQuickPasteSettings.readEnabled(patchesPrefs);
 
         List<GboardPatchesSettingsContract.Row> rows =
                 new ArrayList<GboardPatchesSettingsContract.Row>();
@@ -3213,6 +3219,28 @@ public final class GboardPatchesSettingsActivity extends Activity
                 value -> {
                     if (patchesPrefs != null) {
                         GboardLanguageCycleSettings.writeSkipDuplicatePairs(patchesPrefs, value);
+                    }
+                }));
+
+        rows.add(new GboardPatchesSettingsContract.ToggleRow(
+                GboardSettingsText.get(context, R.string.gboard_patches_comma_spacing_title),
+                GboardSettingsText.get(context, R.string.gboard_patches_comma_spacing_summary),
+                true,
+                commaSpacingEnabled,
+                value -> {
+                    if (patchesPrefs != null) {
+                        GboardCommaSpacingSettings.writeEnabled(patchesPrefs, value);
+                    }
+                }));
+
+        rows.add(new GboardPatchesSettingsContract.ToggleRow(
+                GboardSettingsText.get(context, R.string.gboard_patches_quick_paste_title),
+                GboardSettingsText.get(context, R.string.gboard_patches_quick_paste_summary),
+                true,
+                quickPasteEnabled,
+                value -> {
+                    if (patchesPrefs != null) {
+                        GboardQuickPasteSettings.writeEnabled(patchesPrefs, value);
                     }
                 }));
 

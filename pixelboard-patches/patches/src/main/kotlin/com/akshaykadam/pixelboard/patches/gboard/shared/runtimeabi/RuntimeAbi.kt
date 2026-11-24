@@ -37,6 +37,11 @@ internal enum class RuntimeCallId(internal val encodedAbi: String) {
     KEYBOARD_RUNTIME_SANITIZE_KEY_LABEL("Lcom/akshaykadam/pixelboard/extension/keyboard/GboardKeyboardRuntime;->sanitizeKeyLabel(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;"),
     KEYBOARD_RUNTIME_PERFORM_HAPTIC_FEEDBACK("Lcom/akshaykadam/pixelboard/extension/keyboard/GboardKeyboardRuntime;->performHapticFeedback(Landroid/view/View;I)Z"),
     LANGUAGE_CYCLE_RUNTIME_NEXT_ENTRY("Lcom/akshaykadam/pixelboard/extension/language/GboardLanguageCycleRuntime;->nextEntry(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object;"),
+    COMMA_SPACING_RUNTIME_ON_START_INPUT("Lcom/akshaykadam/pixelboard/extension/keyboard/GboardCommaSpacingRuntime;->onStartInput(Ljava/lang/Object;Landroid/view/inputmethod/EditorInfo;)V"),
+    COMMA_SPACING_RUNTIME_COMMIT_TEXT("Lcom/akshaykadam/pixelboard/extension/keyboard/GboardCommaSpacingRuntime;->commitText(Landroid/view/inputmethod/InputConnection;Ljava/lang/CharSequence;I)Z"),
+    COMMA_SPACING_RUNTIME_COMMIT_TEXT_WITH_ATTR("Lcom/akshaykadam/pixelboard/extension/keyboard/GboardCommaSpacingRuntime;->commitTextWithAttribute(Landroid/view/inputmethod/InputConnection;Ljava/lang/CharSequence;ILjava/lang/Object;)Z"),
+    QUICK_PASTE_RUNTIME_ON_INPUT_VIEW_CREATED("Lcom/akshaykadam/pixelboard/extension/clipboard/GboardQuickPasteRuntime;->onInputViewCreated(Ljava/lang/Object;Landroid/view/View;)V"),
+    QUICK_PASTE_RUNTIME_ON_START_INPUT_VIEW("Lcom/akshaykadam/pixelboard/extension/clipboard/GboardQuickPasteRuntime;->onStartInputView(Ljava/lang/Object;Landroid/view/inputmethod/EditorInfo;)V"),
 }
 
 internal data class RuntimeAbi(
