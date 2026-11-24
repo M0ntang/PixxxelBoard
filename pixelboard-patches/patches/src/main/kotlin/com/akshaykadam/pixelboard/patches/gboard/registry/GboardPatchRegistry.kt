@@ -99,16 +99,17 @@ val gboardSignatureBypassPatch = gboardPublicResourcePatch(
 val gboardPackageRenamePatch = gboardPublicResourcePatch(
     featureId = "package_rename",
     name = "Package Rename",
-    description = "Rename the package to com.akshaykadam.pixelboard and allow " +
-        "a custom app name so it can be installed alongside the official Gboard.",
+    description = "Rename the package to com.akshaykadam.pixelboard.pixxxel and allow " +
+        "a custom app name so it can be installed alongside the official Gboard and PixelBoard.",
     default = true
 ) {
     compatibleWith(COMPATIBILITY_GBOARD)
 
     val appDisplayName = stringOption(
         key = "app_display_name",
-        default = "PixelBoard",
+        default = "PixxxelBoard",
         values = linkedMapOf(
+            "PixxxelBoard" to "PixxxelBoard",
             "PixelBoard" to "PixelBoard",
             "Gboard" to "Gboard",
             "Gboard Dev" to "Gboard Dev",
